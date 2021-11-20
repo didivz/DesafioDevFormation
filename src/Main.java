@@ -21,7 +21,11 @@ public class Main {
         // Resultado esperado:
         // - Beatriz
         // - Larissa
+
+        mesaDoFinanceiro.adicionarPessoa(beatriz);
+        mesaDoFinanceiro.adicionarPessoa(larissa);
         mesaDoFinanceiro.mostrarPessoas();
+
 
         computadorLarissa.ligar();
 
@@ -29,5 +33,7 @@ public class Main {
         // Resultado esperado:
         // - Computador 'LG PHILIPS PHILIPS FORTREK' esta desligado.
         mesaDoFinanceiro.mostraComputadoresDesligados();
+
+
     }
 }

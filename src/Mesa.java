@@ -20,9 +20,9 @@ public class Mesa {
 
     // Se tiver computador, imprimir os atributos dele
     public void mostraComputadores() {
-        for (int i = 0; i < computadores.length; i++) {
-            if (computadores[i] != null) {
-                System.out.println(computadores[i].mostrar());
+        for (Computador computadore : computadores) {
+            if (computadore != null) {
+                System.out.println(computadore.mostrar());
             }
         }
     }
@@ -41,6 +41,20 @@ public class Mesa {
     }
 
     public void mostrarPessoas() {
+        for (Pessoa pessoa : pessoas) {
+//            pessoa.codar();
+            System.out.println(pessoa.getNome() + " esta na mesa");
+        }
 
     }
+    public void adicionarPessoa(Pessoa pessoa) {
+        for(int i = 0; i < pessoas.length; i++) {
+            if(pessoas[i] == null) {
+                pessoas[i] = pessoa;
+                break;
+            }
+        }
+    }
 }
+
+
