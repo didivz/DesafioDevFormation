@@ -33,6 +33,8 @@ public class Main {
         // Resultado esperado:
         // - Computador 'LG PHILIPS PHILIPS FORTREK' esta desligado.
         mesaDoFinanceiro.mostraComputadoresDesligados();
+//        mesaDoFinanceiro.mostraComputadoresLigados();
+
 
 
     }

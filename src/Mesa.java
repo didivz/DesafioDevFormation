@@ -20,9 +20,9 @@ public class Mesa {
 
     // Se tiver computador, imprimir os atributos dele
     public void mostraComputadores() {
-        for (Computador computadore : computadores) {
-            if (computadore != null) {
-                System.out.println(computadore.mostrar());
+        for (Computador computadores : computadores) {
+            if (computadores != null) {
+                System.out.println(computadores.mostrar());
             }
         }
     }
@@ -37,12 +37,23 @@ public class Mesa {
     }
 
     public void mostraComputadoresDesligados() {
-
+        for(Computador computador : computadores){
+            if(!computador.getLigado()) {
+                System.out.println("Computador " + computador.mostrar() + " está desligado");
+            }
+        }
     }
+
+//    public void mostraComputadoresLigados() {
+//        for(Computador computador : computadores){
+//            if(computador.getLigado()) {
+//                System.out.println("Computador " + computador.mostrar() + " está ligado");
+//            }
+//        }
+//    }
 
     public void mostrarPessoas() {
         for (Pessoa pessoa : pessoas) {
-//            pessoa.codar();
             System.out.println(pessoa.getNome() + " esta na mesa");
         }
 
