@@ -10,14 +10,6 @@ public class Mesa {
         this.computadores = computadores;
     }
 
-    public Pessoa[] getPessoas() {
-        return pessoas;
-    }
-
-    public void setPessoas(Pessoa[] pessoas) {
-        this.pessoas = pessoas;
-    }
-
     // Se tiver computador, imprimir os atributos dele
     public void mostraComputadores() {
         for (int i = 0; i < computadores.length; i++) {
@@ -36,11 +28,30 @@ public class Mesa {
         }
     }
 
-    public void mostraComputadoresDesligados() {
-
-    }
-
-    public void mostrarPessoas() {
-
-    }
+	public void adicionarPessoa(Pessoa pessoa) {
+		for (int i = 0; i < pessoas.length; i++) {
+            if (pessoas[i] == null) {
+                pessoas[i] = pessoa;
+                break;
+            }
+		}
+	}
+	
+	public void mostraPessoas() {
+	        for (int i = 0; i < pessoas.length; i++) {
+	            if (pessoas[i] != null) {
+	                System.out.println(pessoas[i].getNome());
+	            }
+	        }
+	    }
+	
+	public void mostraComputadoresDesligados() {
+		for (int i = 0; i < computadores.length; i++) {
+            if (computadores[i] != null) {
+            	if (!computadores[i].getLigado()) {
+            		System.out.println("O computador " + computadores[i].mostrar() + " esta desligado.");
+            	}
+            }
+        }
+	    }
 }

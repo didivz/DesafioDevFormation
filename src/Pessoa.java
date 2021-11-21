@@ -32,6 +32,6 @@ public class Pessoa {
     }
 
     public void chorar() {
-        System.out.println(this.getNome() + " - EU NAO AGEUNTO MAIS A FACULDADE!");
+        System.out.println(this.getNome() + " - EU NAO AGUENTO MAIS A FACULDADE!");
     }
 }

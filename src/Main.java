@@ -21,13 +21,19 @@ public class Main {
         // Resultado esperado:
         // - Beatriz
         // - Larissa
-        mesaDoFinanceiro.mostrarPessoas();
+        System.out.println("------------------");
+        mesaDoFinanceiro.adicionarPessoa(larissa);
+        mesaDoFinanceiro.adicionarPessoa(beatriz);
+        System.out.println("Mostrando pessoas na mesa:");
+        mesaDoFinanceiro.mostraPessoas();
 
         computadorLarissa.ligar();
 
         // Dever de casa: Implementar o metodo que mostra apenas os computadores que estao desligados.
         // Resultado esperado:
         // - Computador 'LG PHILIPS PHILIPS FORTREK' esta desligado.
+        System.out.println("Mostrando computadores desligados:");
         mesaDoFinanceiro.mostraComputadoresDesligados();
+       
     }
 }

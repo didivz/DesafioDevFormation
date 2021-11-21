@@ -44,6 +44,10 @@ public class Computador {
         this.cpu = cpu;
     }
 
+    public boolean getLigado() {
+        return ligado;
+    }
+
     public void ligar() {
         // Deve ligar o computador
         if (!this.ligado) {
