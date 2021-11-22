@@ -28,30 +28,30 @@ public class Mesa {
         }
     }
 
-	public void adicionarPessoa(Pessoa pessoa) {
-		for (int i = 0; i < pessoas.length; i++) {
+    public void adicionarPessoa(Pessoa pessoa) {
+        for (int i = 0; i < pessoas.length; i++) {
             if (pessoas[i] == null) {
                 pessoas[i] = pessoa;
                 break;
             }
-		}
-	}
-	
-	public void mostraPessoas() {
-	        for (int i = 0; i < pessoas.length; i++) {
-	            if (pessoas[i] != null) {
-	                System.out.println(pessoas[i].getNome());
-	            }
-	        }
-	    }
-	
-	public void mostraComputadoresDesligados() {
-		for (int i = 0; i < computadores.length; i++) {
-            if (computadores[i] != null) {
-            	if (!computadores[i].getLigado()) {
-            		System.out.println("O computador " + computadores[i].mostrar() + " esta desligado.");
-            	}
+        }
+    }
+
+    public void mostraPessoas() {
+        for (Pessoa pessoa : pessoas) {
+            if (pessoa != null) {
+                System.out.println(pessoa.getNome());
             }
         }
-	    }
+    }
+
+    public void mostraComputadoresDesligados() {
+        for (int i = 0; i < computadores.length; i++) {
+            if (computadores[i] != null) {
+                if (!computadores[i].getLigado()) {
+                    System.out.println("O computador " + computadores[i].mostrar() + " esta desligado.");
+                }
+            }
+        }
+    }
 }
